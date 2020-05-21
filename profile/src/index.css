@@ -40,6 +40,54 @@ body {
   transform: scale(1.5);
 }
 
+.container-profile_form {
+  display: flex;
+  flex-direction: column;
+  opacity: 0.9;
+}
+
+.profile_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 200px;
+  position: -ms-page;
+}
+
+.userInfo {
+  width: 300px;
+  padding: 0;
+  margin: 10px;
+  font-size: 20px;
+  color: white;
+  float: left;
+}
+
+.userInfoInput{
+  width: 300px;
+  height: 30px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.registrate_button{
+  width: 200px;
+  height: auto;
+  border: none;
+  padding: 5px;
+  margin-top: 20px;
+  background-color: darkcyan;
+  color: white;
+  font-weight: bold;
+  transition: transform .3s;
+  font-size: 30px;
+}
+
+.registrate_button:hover{
+  background-color: rgb(9, 94, 94);;
+  transform: scale(1.5);
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

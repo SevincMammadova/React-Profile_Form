@@ -1,16 +1,55 @@
 import React from 'react';
 import Input from './components/input/Input';
+import Paraghraph from './components/paragraph/Paraghraph';
 
 function App() {
   return (
-    <div className="welcome_page-container">
-      <h1 className = 'welcomePage-header'>Welcome to our Team</h1>
-      <Input
-        type = {'submit'}
-        id = {'submit_button'}
-        className = {'submit_button'}
-        value = {'Click me'}
+    <div className="container-profile_form">
+      <form className="profile_form">
+      <Paraghraph className="userInfo" id="fullName">
+        Full Name:
+      </Paraghraph>
+      <Input 
+        type = {'text'}
+        className = {'userInfoInput'}
+        id = {'fullNameInput'}
+        placeholder = {'Enter your full name...'}
       />
+      <Paraghraph className="userInfo" id="age">
+        Age:
+      </Paraghraph>
+      <Input 
+        type = {'number'}
+        className = {'userInfoInput'}
+        id = {'ageInput'}
+        placeholder = {'Enter your age...'}
+      />
+      <Paraghraph className="userInfo" id="email">
+        Email:
+      </Paraghraph>
+      <Input 
+        type = {'text'}
+        className = {'userInfoInput'}
+        id = {'emailInput'}
+        placeholder = {'Enter your email...'}
+      />
+      <Paraghraph className="userInfo" id="phone">
+        Phone:
+      </Paraghraph>
+      <Input 
+        type = {'text'}
+        className = {'userInfoInput'}
+        id = {'phoneInput'}
+        placeholder = {'Enter your phone number...'}
+      />
+
+      <Input 
+        type = {'submit'}
+        className = {'registrate_button'}
+        id = {'registrate_button'}
+        value = {'Registrate'}
+      />
+      </form>
     </div>
   );
 }
