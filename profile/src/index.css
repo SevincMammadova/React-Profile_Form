@@ -1,13 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   background: rgb(63,94,251);
-  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(31,21,51,1) 100%);
+  background: radial-gradient(#293a5b, #124966, #00576a, #006468, #2a6f61) fixed;
+  font-family: 'Roboto', sans-serif;
 } 
 
-.text{
-  color: wheat;
+.welcome_page-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px;
+  margin-top: 200px;
+  position: -ms-page;
 }
+
+.welcomePage-header{
+  text-align: center;
+  font-size: 60px;
+  color: white;
+}
+
+.submit_button{
+  width: 200px;
+  height: auto;
+  border: none;
+  padding: 5px;
+  background-color: rgb(9, 94, 94);
+  color: white;
+  font-weight: bold;
+  transition: transform .3s;
+  font-size: 30px;
+}
+.submit_button:hover {
+  background-color: darkcyan;
+  transform: scale(1.5);
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
