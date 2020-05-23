@@ -7,6 +7,7 @@ class ProfileForm extends React.Component{
         super(props);
     }
     render() {
+    
       return (
         <div className="container-profile_form">
           <form className="profile_form">
@@ -32,7 +33,7 @@ class ProfileForm extends React.Component{
               Email:
             </Paraghraph>
             <Input 
-              type = {'text'}
+              type = {'email'}
               className = {'userInfoInput'}
               id = {'emailInput'}
               placeholder = {'Enter your email...'}
@@ -41,7 +42,7 @@ class ProfileForm extends React.Component{
               Phone:
             </Paraghraph>
             <Input 
-              type = {'text'}
+              type = {'tel'}
               className = {'userInfoInput'}
               id = {'phoneInput'}
               placeholder = {'Enter your phone number...'}
