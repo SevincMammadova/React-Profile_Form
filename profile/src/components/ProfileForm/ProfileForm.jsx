@@ -1,7 +1,7 @@
 import React from 'react'
 import Input from '../input/Input'
 import Paraghraph from '../paragraph/Paraghraph'
-import {sendPutRequest} from '../../REST'
+import {sendPostRequest} from '../../REST'
 
 class ProfileForm extends React.Component{
   constructor(props){
@@ -48,7 +48,12 @@ class ProfileForm extends React.Component{
   }
 
   handleSubmit() {
-    const person = this.state;
+    const person = {
+      name: this.state.userName,
+      age: this.state.age,
+      email: this.state.email,
+      phone: this.state.phone,
+    }
     let object = {person}
     let formData = new FormData(document.forms.person);
 
@@ -58,8 +63,7 @@ class ProfileForm extends React.Component{
 
     console.log(object);
     
-
-    sendPutRequest(object)
+    sendPostRequest(object)
   }
 
   render() {
