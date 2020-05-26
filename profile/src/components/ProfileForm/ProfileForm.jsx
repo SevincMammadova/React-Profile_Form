@@ -8,88 +8,59 @@ class ProfileForm extends React.Component{
     super(props);
 
     this.state = {
-      userName: '',
-      age: '',
-      email: '',
-      phone: '',
+      inputValues : {}
+  }
+  }
+
+  inputChangeHandler = (e) => {
+
+    const {name, value} = e.target;
+
+    this.setState(prevState => ({
+        inputValues : {
+        ...prevState.inputValues,
+        [name] : value
     }
-
-    this.handleName = this.handleName.bind(this);
-    this.handleAge = this.handleAge.bind(this);
-    this.handleEmail = this.handleEmail.bind(this);
-    this.handlePhone = this.handlePhone.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    }));
   }
 
- 
+  checkFormHandler = (e) => {
+    e.preventDefault();
 
-  handleName(e) {
-    const value = e.target.value;
-    this.setState({userName: value})
-    console.log(this.state);
-  }
+    console.log( this.state.inputValues );
 
-  handleAge(e) {
-    const value = e.target.value;
-    this.setState({age:value})
-    console.log(this.state);
-  }
+    sendPostRequest(this.state.inputValues)
 
-  handleEmail(e) {
-    const value = e.target.value;
-    this.setState({email:value})
-    console.log(this.state);
-  }
 
-  handlePhone(e) {
-    const value = e.target.value;
-    this.setState({phone:value})
-    console.log(this.state);
-  }
-
-  handleSubmit() {
-    const person = {
-      name: this.state.userName,
-      age: this.state.age,
-      email: this.state.email,
-      phone: this.state.phone,
-    }
-    let object = {person}
-    let formData = new FormData(document.forms.person);
-
-    formData.forEach(function(value, key){
-      object[key] = value;
-    });
-
-    console.log(object);
-    
-    sendPostRequest(object)
+    return false;
   }
 
   render() {
     
     return (
       <div className="container-profile_form">
-        <form className="profile_form" name = 'person' onClick = {this.handleSubmit}>
+        <form className="profile_form" action='' method='post' onSubmit={this.checkFormHandler}>
           <Paraghraph className="userInfo" id="fullName">
             Full Name:
           </Paraghraph>
           <Input 
             type = {'text'}
             className = {'userInfoInput'}
+            name = {'name'}
             id = {'fullNameInput'}
             placeholder = {'Enter your full name...'}
-            onChange = {this.handleName}
+            onChange = {this.inputChangeHandler}
           />
           <Paraghraph className="userInfo" id="age">
             Age:
           </Paraghraph>
           <Input 
             type = {'number'}
+            name = {'age'}
             className = {'userInfoInput'}
             id = {'ageInput'}
             placeholder = {'Enter your age...'}
-            onChange = {this.handleAge}
+            onChange = {this.inputChangeHandler}
           />
           <Paraghraph className="userInfo" id="email">
             Email:
@@ -97,19 +68,21 @@ class ProfileForm extends React.Component{
           <Input 
             type = {'email'}
             className = {'userInfoInput'}
+            name = {'email'}
             id = {'emailInput'}
             placeholder = {'Enter your email...'}
-            onChange = {this.handleEmail}
+            onChange = {this.inputChangeHandler}
           />
           <Paraghraph className="userInfo" id="phone">
             Phone:
           </Paraghraph>
           <Input 
             type = {'tel'}
+            name = {'phone'}
             className = {'userInfoInput'}
             id = {'phoneInput'}
             placeholder = {'Enter your phone number...'}
-            onChange = {this.handlePhone}
+            onChange = {this.inputChangeHandler}
           />
     
           <button  type = {'submit'} className = {'registrate_button'} id = {'registrate_button'}> Registrate</button>
