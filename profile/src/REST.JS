@@ -1,4 +1,4 @@
-export const sendPostRequest = (data, cb) => {
+export const sendPostRequest = data => {
     let xhr = new XMLHttpRequest();
     let dataInJson = JSON.stringify(data);
 

@@ -1,9 +1,8 @@
 import React from 'react';
+import '../paragraph/paraghraph.css'
 
 class Paraghraph extends React.Component {
-    // constructor(props) {
-    //     super(props)
-    // }
+    
     render () {
         const {
             className,

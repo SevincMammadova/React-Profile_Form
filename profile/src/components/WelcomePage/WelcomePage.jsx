@@ -1,4 +1,5 @@
 import React from 'react';
+import '../WelcomePage/welcomePage.css'
 import Input from '../input/Input'
 import ProfileForm from '../ProfileForm/ProfileForm';
 

@@ -3,90 +3,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: rgb(63,94,251);
-  background: radial-gradient(#293a5b, #124966, #00576a, #006468, #2a6f61) fixed;
+  background: linear-gradient(to top, #44082a, #4a143c, #4c204f, #4a2d63, #433b76, #3a4b89, #2a5c9a, #006ca9, #0083b8, #009ac1, #00b0c5, #14c5c5) fixed;
   font-family: 'Roboto', sans-serif;
 } 
-
-.welcome_page-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 100px;
-  margin-top: 200px;
-  position: -ms-page;
-}
-
-.welcomePage-header{
-  text-align: center;
-  font-size: 60px;
-  color: white;
-}
-
-.submit_button{
-  width: 200px;
-  height: auto;
-  border: none;
-  padding: 5px;
-  background-color: rgb(9, 94, 94);
-  color: white;
-  font-weight: bold;
-  transition: transform .3s;
-  font-size: 30px;
-}
-.submit_button:hover {
-  background-color: darkcyan;
-  transform: scale(1.5);
-}
-
-.container-profile_form {
-  display: flex;
-  flex-direction: column;
-}
-
-.profile_form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 200px;
-  position: -ms-page;
-}
-
-.userInfo {
-  width: 300px;
-  padding: 0;
-  margin: 10px;
-  font-size: 20px;
-  color: white;
-  float: left;
-}
-
-.userInfoInput{
-  width: 300px;
-  height: 30px;
-  text-align: left;
-  padding-left: 5px;
-}
-
-.registrate_button{
-  width: 200px;
-  height: auto;
-  border: none;
-  padding: 5px;
-  margin-top: 20px;
-  background-color: darkcyan;
-  color: white;
-  font-weight: bold;
-  transition: transform .3s;
-  font-size: 30px;
-}
-
-.registrate_button:hover{
-  background-color: rgb(9, 94, 94);;
-  transform: scale(1.5);
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -1,4 +1,5 @@
 import React from 'react'
+import '../ProfileForm/profileForm.css'
 import Input from '../input/Input'
 import Paraghraph from '../paragraph/Paraghraph'
 import {sendPostRequest} from '../../REST'
@@ -40,6 +41,8 @@ class ProfileForm extends React.Component{
     return (
       <div className="container-profile_form">
         <form className="profile_form" action='' method='post' onSubmit={this.checkFormHandler}>
+
+          <h1 className = 'profile_form-header'>PROVIDE YOUR CREDITIONALS</h1>
           <Paraghraph className="userInfo" id="fullName">
             Full Name:
           </Paraghraph>

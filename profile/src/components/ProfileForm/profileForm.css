@@ -1,0 +1,39 @@
+
+.container-profile_form {
+    display: flex;
+    flex-direction: column;
+   
+}
+  
+.profile_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(112, 12, 87, 0.164); 
+    margin: auto;
+    margin-top: 150px;
+    position: -ms-page;
+    padding: 20px;
+}
+
+.profile_form-header {
+    color: rgb(73, 5, 58);
+}
+.registrate_button{
+    width: 200px;
+    height: auto;
+    border: none;
+    padding: 5px;
+    margin-top: 20px;
+    background-color: rgb(6, 83, 83);
+    color: white;
+    font-weight: bold;
+    transition: transform .3s;
+    font-size: 30px;
+}
+  
+.registrate_button:hover{
+    background-color: rgb(10, 48, 48);;
+    transform: scale(1.5);
+}
