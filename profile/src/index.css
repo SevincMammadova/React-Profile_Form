@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top, #44082a, #4a143c, #4c204f, #4a2d63, #433b76, #3a4b89, #2a5c9a, #006ca9, #0083b8, #009ac1, #00b0c5, #14c5c5) fixed;
+  font-family: 'Roboto', sans-serif;
+} 
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} 
