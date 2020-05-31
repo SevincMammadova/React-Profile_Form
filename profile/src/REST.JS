@@ -3,6 +3,6 @@ export const sendPostRequest = data => {
     let dataInJson = JSON.stringify(data);
 
     xhr.open("POST", "/add-obj");
-    xhr.setRequestHeader("Content-type", "application-json");
+    xhr.setRequestHeader("Content-type", "application/json");
     xhr.send(dataInJson);
 }
