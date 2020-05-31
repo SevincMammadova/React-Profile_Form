@@ -10,38 +10,30 @@ class ProfileForm extends React.Component{
 
     this.state = {
       inputValues : {}
-  }
+    }
   }
 
   inputChangeHandler = (e) => {
-
     const {name, value} = e.target;
 
     this.setState(prevState => ({
-        inputValues : {
-        ...prevState.inputValues,
-        [name] : value
-    }
+      inputValues : {
+      ...prevState.inputValues,
+      [name] : value
+      }
     }));
   }
 
   checkFormHandler = (e) => {
     e.preventDefault();
-
-    console.log( this.state.inputValues );
-
-    sendPostRequest(this.state.inputValues)
-
-
+    sendPostRequest(this.state.inputValues);
     return false;
   }
 
-  render() {
-    
+  render() { 
     return (
       <div className="container-profile_form">
         <form className="profile_form" action='' method='post' onSubmit={this.checkFormHandler}>
-
           <h1 className = 'profile_form-header'>PROVIDE YOUR CREDITIONALS</h1>
           <Paraghraph className="userInfo" id="fullName">
             Full Name:
@@ -87,7 +79,6 @@ class ProfileForm extends React.Component{
             placeholder = {'Enter your phone number...'}
             onChange = {this.inputChangeHandler}
           />
-    
           <button  type = {'submit'} className = {'registrate_button'} id = {'registrate_button'}> Registrate</button>
         </form>
       </div>
